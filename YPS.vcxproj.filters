@@ -19,4 +19,18 @@
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="base_io.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="file_compare.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fileread_withkey.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
