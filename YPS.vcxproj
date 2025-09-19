@@ -147,6 +147,7 @@
     <ClInclude Include="file_compare.h" />
     <ClInclude Include="_log.h" />
     <ClInclude Include="_time_now.h" />
+    <ClInclude Include="__copyright.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="known_issues.md">
