@@ -14,7 +14,7 @@ int _log(std::string _path, std::string _type, std::string _code, std::string _w
 		+ _infor
 		+ "\n");
 	if (_path == "" || _path == " ") {
-		_path = ".log";
+		_path = time_now(1) + ".log";
 	}
 	int c = file_write_c(_path, _log);
 	return c;
