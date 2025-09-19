@@ -17,7 +17,7 @@ Copyright 2025 翊
 #include <iostream>
 std::string __copyright() {
     std::string __copyright = "翊 的程序\nCopyright (c) 2025 翊\nLicensed under the Apache License, Version 2.0\n";
-    //如果你使用/更改了开放的源代码，请在下方_copyright写入字符串(注意使用\n换行符)。应当包含更改内容和开发者信息，同时，可以更改__ver。
+    //如果第三者使用/更改了开放的源代码，请在下方_copyright写入字符串(注意使用\n换行符)。应当包含更改内容和开发者信息，同时，可以更改__ver。
     std::string __ver = "0.1.13\n";
     std::string _copyright = "";
     return (__copyright + "版本:" + __ver + _copyright);
