@@ -149,6 +149,10 @@
     <ClInclude Include="_time_now.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="known_issues.md">
+      <SubType>
+      </SubType>
+    </None>
     <None Include="README.md" />
     <None Include="_codes.md">
       <SubType>
