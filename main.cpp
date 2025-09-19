@@ -1,12 +1,9 @@
 #include <iostream>
-#include <Windows.h>
-#include <vector>
 #include "_log.h"
-#include "base_io.h"
 #include "file_compare.h"
 #include "fileread_withkey.h"
 
-static std::vector<std::string> filecompare(std::string in_file_name1, std::string in_file_name2);
+std::vector<std::string> filecompare(std::string in_file_name1, std::string in_file_name2);
 int file_write_new(std::string file_name, std::string write_str);
 std::string file_read(std::string file_name);
 int file_write_c(std::string file_name, std::string write_str);

@@ -32,6 +32,9 @@
     <ClInclude Include="_log.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="_time_now.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">

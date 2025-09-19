@@ -53,7 +53,7 @@ public:
 };
 
 
-static std::vector<std::string> filecompare(std::string in_file_name1, std::string in_file_name2) {
+std::vector<std::string> filecompare(std::string in_file_name1, std::string in_file_name2) {
     std::vector<std::string> compare_an;
     compare_an = my_compare::file_compare_stringtext(in_file_name1, in_file_name2);
     return compare_an;
