@@ -146,6 +146,7 @@
     <ClInclude Include="entropy.h" />
     <ClInclude Include="fileread_withkey.h" />
     <ClInclude Include="file_compare.h" />
+    <ClInclude Include="getsoexport.h" />
     <ClInclude Include="opengl.h" />
     <ClInclude Include="_log.h" />
     <ClInclude Include="_time_now.h" />
