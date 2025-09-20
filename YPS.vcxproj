@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base_io.h" />
+    <ClInclude Include="entropy.h" />
     <ClInclude Include="fileread_withkey.h" />
     <ClInclude Include="file_compare.h" />
     <ClInclude Include="opengl.h" />
