@@ -38,6 +38,9 @@
     <ClInclude Include="__copyright.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="opengl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">

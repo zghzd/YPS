@@ -145,6 +145,7 @@
     <ClInclude Include="base_io.h" />
     <ClInclude Include="fileread_withkey.h" />
     <ClInclude Include="file_compare.h" />
+    <ClInclude Include="opengl.h" />
     <ClInclude Include="_log.h" />
     <ClInclude Include="_time_now.h" />
     <ClInclude Include="__copyright.h" />
