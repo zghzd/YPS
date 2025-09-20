@@ -47,6 +47,9 @@
     <ClInclude Include="getsoexport.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="getdllexport.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
