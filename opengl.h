@@ -108,18 +108,18 @@ void MessageLoop(GLWin32Context& ctx, int frames = 300) {
     }
 }
 
-void _opengl(std::string __data) {
-    _log(__data + ".log", "D", "0000-0001", "应用程序主线程OpenGL", "OpenGL渲染：60fps\t1300帧");
+void _opengl(std::string __date) {
+    _log(__date + ".log", "D", "0000-0001", "应用程序主线程OpenGL", "OpenGL渲染：60fps\t1300帧");
     std::cerr << "OpenGL渲染：60fps\t1300帧" << std::endl;
     GLWin32Context ctx = {};
     if (!CreateOpenGLWindow(ctx, 640, 480, "Win32 OpenGL")) {
         std::cerr << "无法创建OpenGL窗口" << std::endl;
         return;
     }
-    _log(__data + ".log", "D", "0000-0001", "应用程序主线程OpenGL", "渲染");
+    _log(__date + ".log", "D", "0000-0001", "应用程序主线程OpenGL", "渲染");
     std::cerr << "渲染" << std::endl;
     MessageLoop(ctx, 1300);
-    _log(__data + ".log", "D", "0000-0001", "应用程序主线程OpenGL", "渲染结束");
+    _log(__date + ".log", "D", "0000-0001", "应用程序主线程OpenGL", "渲染结束");
     std::cerr << "渲染结束" << std::endl;
     DestroyOpenGLWindow(ctx);
 }
