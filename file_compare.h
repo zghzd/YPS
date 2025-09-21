@@ -11,7 +11,7 @@
 
 class my_compare {
 private:
-    string in_file_data_stringtext(std::string in_file_name) {
+    std::string in_file_data_stringtext(std::string in_file_name) {
         std::cin >> in_file_name;
         return file_read(in_file_name);
     }
@@ -19,8 +19,8 @@ public:
     static std::vector<std::string> file_compare_stringtext(std::string in_file_name1, std::string in_file_name2) {
         std::vector<std::string> compare_an;
         my_compare text_0, text_1;
-        string text_a = text_0.in_file_data_stringtext(in_file_name1);
-        string text_b = text_1.in_file_data_stringtext(in_file_name2);
+        std::string text_a = text_0.in_file_data_stringtext(in_file_name1);
+        std::string text_b = text_1.in_file_data_stringtext(in_file_name2);
         std::replace(text_b.begin(), text_b.end(), '\r', '\n');
         std::vector<std::string>text_compare_b;
         std::vector<std::string>text_compare_a;
@@ -35,7 +35,7 @@ public:
             text_compare_b.push_back(line);
         }
         for (size_t i = 0; i < text_compare_b.size(); ++i) {
-            if (text_a.find(text_compare_b[i]) != string::npos) {
+            if (text_a.find(text_compare_b[i]) != std::string::npos) {
                 auto new_end = std::remove(text_compare_a.begin(), text_compare_a.end(), text_compare_b[i]);
                 text_compare_a.erase(new_end, text_compare_a.end());
             }

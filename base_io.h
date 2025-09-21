@@ -6,12 +6,12 @@
 #include <iostream>
 #include <windows.h>
 
-using namespace std;
+//using namespace std;
 
 //ÎÄ¼þÁ÷
-int file_write_new(string file_name, string write_str) {
+int file_write_new(std::string file_name, std::string write_str) {
     
-    ofstream outputFile;
+    std::ofstream outputFile;
     outputFile.open(file_name);
         if (outputFile.is_open()) {
             outputFile << write_str;
@@ -23,8 +23,8 @@ int file_write_new(string file_name, string write_str) {
         }
     
 }
-string file_read(string file_name) {
-        ifstream f(file_name.c_str());
+std::string file_read(std::string file_name) {
+    std::ifstream f(file_name.c_str());
         std::ifstream fin(file_name);
         if (f.good()) {
             goto file_good;
@@ -49,10 +49,10 @@ string file_read(string file_name) {
 }
 
 
-int file_write_c(string file_name, string write_str) {
+int file_write_c(std::string file_name, std::string write_str) {
 
-    ofstream outputFile;
-    outputFile.open(file_name,ios_base::app);
+    std::ofstream outputFile;
+    outputFile.open(file_name, std::ios_base::app);
     if (outputFile.is_open()) {
 
         outputFile << write_str;
