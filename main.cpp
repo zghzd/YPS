@@ -57,6 +57,14 @@ int main(int argc, char* argv[]) {
 	else if (std::string(argv[1]) == "opengl") {
 		std::cout << "不支持" << std::endl;
 	}
+	else if (std::string(argv[1]) == "entropy") {
+		if (argc < 3) {
+			std::cerr << "错误：参数过少" << std::endl;
+			_log(__date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
+			return -1;
+		}
+		double a = FileEntropy(argv[2], __date);
+	}
 	else {
 		std::cout << "无法处理" << std::endl;
 		return 0;
