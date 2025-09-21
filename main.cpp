@@ -64,6 +64,7 @@ int main(int argc, char* argv[]) {
 			return -1;
 		}
 		double a = FileEntropy(argv[2], __date);
+		std::cout << a << std::endl;
 	}
 	else {
 		std::cout << "无法处理" << std::endl;
