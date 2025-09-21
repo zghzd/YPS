@@ -61,5 +61,8 @@
     <None Include="known_issues.md">
       <Filter>资源文件</Filter>
     </None>
+    <None Include="commands.md">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

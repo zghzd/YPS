@@ -154,6 +154,10 @@
     <ClInclude Include="__copyright.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="commands.md">
+      <SubType>
+      </SubType>
+    </None>
     <None Include="known_issues.md">
       <SubType>
       </SubType>
