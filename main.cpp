@@ -28,6 +28,9 @@ int main(int argc, char* argv[]) {
 		v = filecompare(argv[2], argv[3]);
 		for (size_t i = 0; i < v.size(); ++i) {
 			std::cout << v[i] << std::endl;
+			if (argc >= 5 && std::string(argv[4]) == "-o") {
+				file_write_c("filecompare.log", v[i] + "\n");
+			}
 		}
 	}
 	else if (std::string(argv[1]) == "getsoexport") {
@@ -40,6 +43,9 @@ int main(int argc, char* argv[]) {
 		v = GetSoExports(argv[2], __date);
 		for (size_t i = 0; i < v.size(); ++i) {
 			std::cout << v[i] << std::endl;
+			if (argc >= 4 && std::string(argv[3]) == "-o") {
+				file_write_c(std::string(argv[2]) + ".export.txt", v[i] + "\n");
+			}
 		}
 	}
 	else if (std::string(argv[1]) == "getdllexport64") {
@@ -52,6 +58,9 @@ int main(int argc, char* argv[]) {
 		v = GetDllExports64(argv[2], __date);
 		for (size_t i = 0; i < v.size(); ++i) {
 			std::cout << v[i] << std::endl;
+			if (argc >= 4 && std::string(argv[3]) == "-o") {
+				file_write_c(std::string(argv[2]) + ".export.txt", v[i] + "\n");
+			}
 		}
 	}
 	else if (std::string(argv[1]) == "opengl") {
