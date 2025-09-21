@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
 		std::vector<std::string>v;
 		v = filecompare(argv[2], argv[3]);
 		for (size_t i = 0; i < v.size(); ++i) {
-			std::cout << v[i] << "\n";
+			std::cout << v[i] << std::endl;
 		}
 	}
 	else if (std::string(argv[1]) == "getsoexport") {
@@ -39,7 +39,7 @@ int main(int argc, char* argv[]) {
 		std::vector<std::string>v;
 		v = GetSoExports(argv[2], __date);
 		for (size_t i = 0; i < v.size(); ++i) {
-			std::cout << v[i] << "\n";
+			std::cout << v[i] << std::endl;
 		}
 	}
 	else if (std::string(argv[1]) == "getdllexport64") {
@@ -51,7 +51,7 @@ int main(int argc, char* argv[]) {
 		std::vector<std::string>v;
 		v = GetDllExports64(argv[2], __date);
 		for (size_t i = 0; i < v.size(); ++i) {
-			std::cout << v[i] << "\n";
+			std::cout << v[i] << std::endl;
 		}
 	}
 	else if (std::string(argv[1]) == "opengl") {
