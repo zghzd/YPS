@@ -12,14 +12,14 @@ std::string __date = time_now(1);
 
 int main(int argc, char* argv[]) {
 	_log(__date + ".log", "D", "0000-0001", "应用程序主线程", "应用程序成功启动且已完成基本的初始化");
-	if (argc < 1) {
+	if (argc < 2) {
 		std::cerr << "错误：参数过少" << std::endl;
 		_log(__date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
 		return -1;
 	}
 
-	if (argv[1] == "filecompare") {
-		if (argc < 3) {
+	if (std::string(argv[1]) == "filecompare") {
+		if (argc < 4) {
 			std::cerr << "错误：参数过少" << std::endl;
 			_log(__date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
 			return -1;
@@ -30,8 +30,8 @@ int main(int argc, char* argv[]) {
 			std::cout << v[i] << "\n";
 		}
 	}
-	else if (argv[1] == "getsoexport") {
-		if (argc < 2) {
+	else if (std::string(argv[1]) == "getsoexport") {
+		if (argc < 3) {
 			std::cerr << "错误：参数过少" << std::endl;
 			_log(__date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
 			return -1;
@@ -42,8 +42,8 @@ int main(int argc, char* argv[]) {
 			std::cout << v[i] << "\n";
 		}
 	}
-	else if (argv[1] == "getdllexport64") {
-		if (argc < 2) {
+	else if (std::string(argv[1]) == "getdllexport64") {
+		if (argc < 3) {
 			std::cerr << "错误：参数过少" << std::endl;
 			_log(__date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
 			return -1;
@@ -54,11 +54,10 @@ int main(int argc, char* argv[]) {
 			std::cout << v[i] << "\n";
 		}
 	}
-	else if (argv[1] == "opengl") {
+	else if (std::string(argv[1]) == "opengl") {
 		std::cout << "不支持" << std::endl;
 	}
 	else {
 		return 0;
 	}
-	return 0;
 }
