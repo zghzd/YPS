@@ -58,6 +58,7 @@ int main(int argc, char* argv[]) {
 		std::cout << "不支持" << std::endl;
 	}
 	else {
+		std::cout << "无法处理" << std::endl;
 		return 0;
 	}
 }
