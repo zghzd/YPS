@@ -1,10 +1,11 @@
 #pragma once
-#include<fstream>
-#include<string>
-#include<vector>
-#include<sstream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <sstream>
 #include <iostream>
 #include <windows.h>
+#include "_log.h"
 
 //using namespace std;
 
@@ -19,6 +20,7 @@ int file_write_new(std::string file_name, std::string write_str) {
             return 0;
             }
         else {
+            _log(__date + ".log", "E", "0001-0000", "file_write_new", "无法打开输出文件");
             return -1;
         }
     
@@ -30,6 +32,7 @@ std::string file_read(std::string file_name) {
             goto file_good;
         }
         else {
+            _log(__date + ".log", "E", "0001-0000", "file_read", "输入文件文件流错误");
             return "";
         }
     file_good:
@@ -43,6 +46,7 @@ std::string file_read(std::string file_name) {
         else
         {
             fin.close();
+            _log(__date + ".log", "E", "0001-0000", "file_read", "无法打开输入文件");
             return "";
         }
    
@@ -60,6 +64,7 @@ int file_write_c(std::string file_name, std::string write_str) {
         return 0;
     }
     else {
+        _log(__date + ".log", "E", "0001-0000", "file_write_c", "无法打开输出文件");
         return -1;
     }
 

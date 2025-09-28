@@ -12,7 +12,6 @@
 class my_compare {
 private:
     std::string in_file_data_stringtext(std::string in_file_name) {
-        //std::cin >> in_file_name;
         return file_read(in_file_name);
     }
 public:
