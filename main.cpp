@@ -9,9 +9,10 @@
 #include "getdllexport.h"
 
 std::string __date = time_now(1);
+std::string _run_time = time_now();
 
 int main(int argc, char* argv[]) {
-	_log(__date + ".log", "D", "0000-0001", "应用程序主线程", "应用程序成功启动且已完成基本的初始化");
+	_log(__date + ".log", "D", "0000-0001", "应用程序主线程", "应用程序在" + _run_time + "时间启动");
 	if (argc < 2) {
 		std::cerr << "错误：参数过少" << std::endl;
 		_log(__date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
