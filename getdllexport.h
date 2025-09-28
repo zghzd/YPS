@@ -22,6 +22,7 @@ DWORD RVAToOffset64(DWORD rva, IMAGE_NT_HEADERS64* ntHeaders) {
 std::vector<std::string> GetDllExports64(const std::string& dllPath, std::string __date) {
     std::vector<std::string> exportedFunctions;
 
+    _log(__date + ".log", "D", "0000-0001", "dll文件导出函数遍历", "遍历" + dllPath + "文件");
     HANDLE hFile = CreateFileA(dllPath.c_str(), GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
     if (hFile == INVALID_HANDLE_VALUE) {
         _log(__date + ".log", "E", "0001-0000", "dll导出函数遍历", "无法打开dll文件");
@@ -109,6 +110,6 @@ std::vector<std::string> GetDllExports64(const std::string& dllPath, std::string
     UnmapViewOfFile(pBaseAddr);
     CloseHandle(hMapping);
     CloseHandle(hFile);
-
+    _log(__date + ".log", "D", "0000-0001", "dll文件导出函数遍历", "完成遍历" + dllPath + "文件");
     return exportedFunctions;
 }
