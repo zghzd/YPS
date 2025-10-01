@@ -7,7 +7,7 @@
 #include <windows.h>
 #include "_log.h"
 
-//using namespace std;
+std::string __date = time_now(1);
 
 //ÎÄ¼şÁ÷
 int file_write_new(std::string file_name, std::string write_str) {
