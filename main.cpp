@@ -7,6 +7,7 @@
 #include "entropy.h"
 #include "getsoexport.h"
 #include "getdllexport.h"
+#include "SmaliFilesProcessing.h"
 
 std::string __date = time_now(1);
 std::string _run_time = time_now();
@@ -75,6 +76,14 @@ int main(int argc, char* argv[]) {
 		}
 		double a = FileEntropy(argv[2], __date);
 		std::cout << a << std::endl;
+	}
+	else if (std::string(argv[1]) == "smalifilesprocessing") {
+		if (argc < 4) {
+			std::cerr << "错误：参数过少" << std::endl;
+			_log(__date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
+			return -1;
+		}
+		SmaliFilesProcessing(argv[2], argv[3], __date);
 	}
 	else {
 		std::cout << "无法处理" << std::endl;
