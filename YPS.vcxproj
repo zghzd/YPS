@@ -149,6 +149,7 @@
     <ClInclude Include="getdllexport.h" />
     <ClInclude Include="getsoexport.h" />
     <ClInclude Include="opengl.h" />
+    <ClInclude Include="ProcessingCenter.h" />
     <ClInclude Include="SmaliFilesProcessing.h" />
     <ClInclude Include="_log.h" />
     <ClInclude Include="_time_now.h" />

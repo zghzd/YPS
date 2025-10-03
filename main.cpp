@@ -8,6 +8,7 @@
 #include "getsoexport.h"
 #include "getdllexport.h"
 #include "SmaliFilesProcessing.h"
+#include "ProcessingCenter.h"
 
 std::string __date = time_now(1);
 std::string _run_time = time_now();
@@ -84,6 +85,9 @@ int main(int argc, char* argv[]) {
 			return -1;
 		}
 		SmaliFilesProcessing(argv[2], argv[3], __date);
+	}
+	else if (std::string(argv[1]) == "start") {
+		//PathInitialize();
 	}
 	else {
 		std::cout << "无法处理" << std::endl;
