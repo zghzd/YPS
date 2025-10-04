@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdlib>
-#include "_log.h"
+#include "log.h"
 #include "file_compare.h"
 #include "fileread_withkey.h"
 #include "opengl.h"
@@ -10,21 +10,21 @@
 #include "SmaliFilesProcessing.h"
 #include "ProcessingCenter.h"
 
-std::string __date = time_now(1);
-std::string _run_time = time_now();
+std::string my_date = time_now(1);
+std::string run_time = time_now();
 
 int main(int argc, char* argv[]) {
-	_log(__date + ".log", "D", "0000-0001", "应用程序主线程", "应用程序在" + _run_time + "时间启动");
+	my_log(my_date + ".log", "D", "0000-0001", "应用程序主线程", "应用程序在" + run_time + "时间启动");
 	if (argc < 2) {
 		std::cerr << "错误：参数过少" << std::endl;
-		_log(__date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
+		my_log(my_date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
 		return -1;
 	}
 
 	if (std::string(argv[1]) == "filecompare") {
 		if (argc < 4) {
 			std::cerr << "错误：参数过少" << std::endl;
-			_log(__date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
+			my_log(my_date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
 			return -1;
 		}
 		std::vector<std::string>v;
@@ -39,11 +39,11 @@ int main(int argc, char* argv[]) {
 	else if (std::string(argv[1]) == "getsoexport") {
 		if (argc < 3) {
 			std::cerr << "错误：参数过少" << std::endl;
-			_log(__date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
+			my_log(my_date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
 			return -1;
 		}
 		std::vector<std::string>v;
-		v = GetSoExports(argv[2], __date);
+		v = GetSoExports(argv[2], my_date);
 		for (size_t i = 0; i < v.size(); ++i) {
 			std::cout << v[i] << std::endl;
 			if (argc >= 4 && std::string(argv[3]) == "-o") {
@@ -54,11 +54,11 @@ int main(int argc, char* argv[]) {
 	else if (std::string(argv[1]) == "getdllexport64") {
 		if (argc < 3) {
 			std::cerr << "错误：参数过少" << std::endl;
-			_log(__date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
+			my_log(my_date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
 			return -1;
 		}
 		std::vector<std::string>v;
-		v = GetDllExports64(argv[2], __date);
+		v = GetDllExports64(argv[2], my_date);
 		for (size_t i = 0; i < v.size(); ++i) {
 			std::cout << v[i] << std::endl;
 			if (argc >= 4 && std::string(argv[3]) == "-o") {
@@ -72,19 +72,19 @@ int main(int argc, char* argv[]) {
 	else if (std::string(argv[1]) == "entropy") {
 		if (argc < 3) {
 			std::cerr << "错误：参数过少" << std::endl;
-			_log(__date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
+			my_log(my_date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
 			return -1;
 		}
-		double a = FileEntropy(argv[2], __date);
+		double a = FileEntropy(argv[2], my_date);
 		std::cout << a << std::endl;
 	}
 	else if (std::string(argv[1]) == "smalifilesprocessing") {
 		if (argc < 4) {
 			std::cerr << "错误：参数过少" << std::endl;
-			_log(__date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
+			my_log(my_date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");
 			return -1;
 		}
-		SmaliFilesProcessing(argv[2], argv[3], __date);
+		SmaliFilesProcessing(argv[2], argv[3], my_date);
 	}
 	else if (std::string(argv[1]) == "start") {
 		//PathInitialize();

@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 #include <regex>
-#include "_log.h"
+#include "log.h"
 
 namespace fs = std::filesystem;
 
@@ -51,7 +51,7 @@ std::vector<fs::path> getSmaliDirs(const std::string& srcRoot) {
     return dirs;
 }
 
-void SmaliFilesProcessing(const std::string& srcRoot, const std::string& dstRoot, std::string __date) {
+void SmaliFilesProcessing(const std::string& srcRoot, const std::string& dstRoot, std::string my_date) {
     std::vector<fs::path> smaliDirs = getSmaliDirs(srcRoot);
     for (const auto& srcDir : smaliDirs) {
         for (auto& p : fs::recursive_directory_iterator(srcDir)) {
@@ -76,7 +76,7 @@ void SmaliFilesProcessing(const std::string& srcRoot, const std::string& dstRoot
                 fout << formatted;
                 fout.close();
                 std::cout << "处理: " << srcPath << " -> " << dstPath << std::endl;
-                _log(__date + ".log", "D", "0000-0001", "Smali处理", "处理:" + srcPath + " -> " + dstPath);
+                my_log(my_date + ".log", "D", "0000-0001", "Smali处理", "处理:" + srcPath + " -> " + dstPath);
             }
         }
     }

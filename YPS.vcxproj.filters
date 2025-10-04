@@ -29,13 +29,13 @@
     <ClInclude Include="fileread_withkey.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="_log.h">
+    <ClInclude Include="log.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="_time_now.h">
+    <ClInclude Include="time_now.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="__copyright.h">
+    <ClInclude Include="copyright.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="opengl.h">

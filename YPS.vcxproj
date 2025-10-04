@@ -151,9 +151,9 @@
     <ClInclude Include="opengl.h" />
     <ClInclude Include="ProcessingCenter.h" />
     <ClInclude Include="SmaliFilesProcessing.h" />
-    <ClInclude Include="_log.h" />
-    <ClInclude Include="_time_now.h" />
-    <ClInclude Include="__copyright.h" />
+    <ClInclude Include="log.h" />
+    <ClInclude Include="time_now.h" />
+    <ClInclude Include="copyright.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="commands.md">
