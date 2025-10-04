@@ -3,7 +3,7 @@
 #include "_time_now.h"
 
 int _log(std::string _path, std::string _type, std::string _code, std::string _what, std::string _infor) {
-	std::string _time = time_now();
+	std::string _time = time_now_x1();
 	std::string _log = ("["
 		+ _time
 		+ "]"

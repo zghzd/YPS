@@ -23,3 +23,10 @@ std::string time_now(int __short = 0) {
 	}
 	return _now;
 }
+
+std::string time_now_x1(int __short = 0) {
+	auto now = std::chrono::system_clock::now();
+	auto shanghai_time = std::chrono::zoned_time{ "Asia/Shanghai", now };
+
+	return std::format("{:%Y-%m-%dT%H:%M:%S%z}", shanghai_time);
+}
