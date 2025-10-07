@@ -20,7 +20,6 @@ std::string run_time = time_now();
 void ExecStart(std::string my_date);
 
 int exec_main(int argc, char* argv[]) {
-	my_log(my_date + ".log", "D", "0000-0001", "应用程序主线程", "应用程序在" + run_time + "时间启动");
 	if (argc < 2) {
 		std::cerr << "错误：参数过少" << std::endl;
 		my_log(my_date + ".log", "E", "0001-0000", "应用程序主线程", "用户传递参数不合适");

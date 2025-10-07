@@ -6,3 +6,4 @@
 | getsoexport | YPS.exe getsoexport \<file1> \[-o] | 遍历一个so文件的导出函数 | file1是so文件的文件名,-o指定允许输出到文件 |
 | entropy | YPS.exe entropy file1 | 对二进制文件求熵 | file1是文件的文件名 |
 | smalifilesprocessing | YPS.exe smalifilesprocessing dir1 dir2 | 整理合并smali文件 | dir1是smali文件的目录,dir2是输出 |
+| start | YPS.exe start | 启用shell | --- |
