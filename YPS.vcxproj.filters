@@ -61,7 +61,7 @@
     <None Include="README.md">
       <Filter>资源文件</Filter>
     </None>
-    <None Include="_codes.md">
+    <None Include="codes.md">
       <Filter>资源文件</Filter>
     </None>
     <None Include="known_issues.md">
