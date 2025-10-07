@@ -20,5 +20,5 @@ std::string copyright() {
     //如果第三者使用/更改了开放的源代码，请在下方copyright_2写入字符串(注意使用\n换行符)。应当包含更改内容和开发者信息，同时，可以更改ver。
     std::string ver = "0.1.16\n";
     std::string copyright_2 = "";
-    return (copyright + "版本:" + ver + copyright);
+    return (copyright + "版本:" + ver + copyright_2);
 }
