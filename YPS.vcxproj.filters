@@ -38,9 +38,6 @@
     <ClInclude Include="copyright.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="opengl.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="entropy.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -53,7 +50,16 @@
     <ClInclude Include="SmaliFilesProcessing.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="ProcessingCenter.h">
+    <ClInclude Include="data_processing.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="processingcenter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="load_pack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="runmode-file.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -61,13 +67,16 @@
     <None Include="README.md">
       <Filter>资源文件</Filter>
     </None>
-    <None Include="codes.md">
-      <Filter>资源文件</Filter>
-    </None>
     <None Include="known_issues.md">
       <Filter>资源文件</Filter>
     </None>
-    <None Include="commands.md">
+    <None Include="ArgumentValue.md">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="devpackage.md">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="example.pack.yps">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>

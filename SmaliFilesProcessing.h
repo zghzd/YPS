@@ -76,7 +76,6 @@ void SmaliFilesProcessing(const std::string& srcRoot, const std::string& dstRoot
                 fout << formatted;
                 fout.close();
                 std::cout << "处理: " << srcPath << " -> " << dstPath << std::endl;
-                my_log(my_date + ".log", "D", "0000-0001", "Smali处理", "处理:" + srcPath + " -> " + dstPath);
             }
         }
     }

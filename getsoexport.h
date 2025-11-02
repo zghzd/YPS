@@ -47,7 +47,6 @@ struct Elf64_Sym {
 #pragma pack(pop)
 
 std::vector<std::string> GetSoExports(const std::string& file_path, std::string my_date) {
-    my_log(my_date + ".log", "D", "0000-0001", "so文件导出函数遍历", "遍历" + file_path + "文件的函数");
     std::vector<std::string> exports;
     std::ifstream f(file_path, std::ios::binary);
     if (!f) return exports;
@@ -86,6 +85,5 @@ std::vector<std::string> GetSoExports(const std::string& file_path, std::string 
             if (!name.empty()) exports.push_back(name);
         }
     }
-    my_log(my_date + ".log", "D", "0000-0001", "so文件导出函数遍历", "完成遍历" + file_path + "文件");
     return exports;
 }

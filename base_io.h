@@ -62,3 +62,22 @@ int file_write_c(std::string file_name, std::string write_str) {
     }
 
 }
+
+std::vector<std::string> file_read_lines(const std::string& filename) {
+    std::vector<std::string> lines;
+    std::ifstream file(filename);
+    if (!file.is_open()) {
+        return lines;
+    }
+    std::string line;
+    while (std::getline(file, line)) {
+        if (!line.empty()) {
+            lines.push_back(line);
+        }
+    }
+    file.close();
+    if (lines.empty()) {
+        return std::vector<std::string>();
+    }
+    return lines;
+}

@@ -2,13 +2,12 @@
 #include "base_io.h"
 #include "time_now.h"
 
-int my_log(std::string path, std::string type, std::string code, std::string what, std::string infor) {
+int my_log(std::string path, std::string type, std::string what, std::string infor) {
 	std::string time = time_now_x1();
 	std::string my_log = ("["
 		+ time
 		+ "]"
-		+ type + "-"
-		+ code + ":"
+		+ type + ":"
 		+ what
 		+ "->"
 		+ infor
