@@ -73,11 +73,5 @@
     <None Include="ArgumentValue.md">
       <Filter>资源文件</Filter>
     </None>
-    <None Include="devpackage.md">
-      <Filter>资源文件</Filter>
-    </None>
-    <None Include="example.pack.yps">
-      <Filter>资源文件</Filter>
-    </None>
   </ItemGroup>
 </Project>

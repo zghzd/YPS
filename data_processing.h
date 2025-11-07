@@ -69,3 +69,22 @@ std::string getFileExtension(const std::string& file) {
 
     return extension;
 }
+
+std::string transPathToDot(const std::string path) {
+    std::string result = path;
+    for (size_t i = 0; i < result.length(); ++i) {
+        if (result[i] == '\\') {
+            result[i] = '/';
+        }
+    }
+    size_t lastSlash = result.find_last_of('/');
+    for (size_t i = 0; i < result.length(); ++i) {
+        if (result[i] == '/' && i != lastSlash) {
+            result[i] = '.';
+        }
+    }
+    if (lastSlash != std::string::npos) {
+        result[lastSlash] = '_';
+    }
+    return result;
+}

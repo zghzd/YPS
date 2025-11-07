@@ -1,6 +1,5 @@
 # YPS  
 # 快速导航  
-[扩展包开发手册](devpackage.md)  
 [已知问题](known_issues.md)  
 [参数详情](ArgumentValue.md)  
 

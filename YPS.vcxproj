@@ -164,11 +164,6 @@
       <SubType>
       </SubType>
     </None>
-    <None Include="devpackage.md">
-      <SubType>
-      </SubType>
-    </None>
-    <None Include="example.pack.yps" />
     <None Include="known_issues.md">
       <SubType>
       </SubType>
