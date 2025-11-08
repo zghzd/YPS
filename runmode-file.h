@@ -47,7 +47,7 @@ void partsthefile(std::vector<std::string>will_partfiles, std::string inputpath)
 		}
 		cre_dir = "temp/" + getFileExtension(fname);
 		fs::create_directory(cre_dir);
-		copyed_name = removePrefix(transPathToDot(fname), inputpath);
+		copyed_name = removePrefix(transPathToDot(fname), transPathToDot(inputpath));
 		fname_c = workpath + "temp/" + getFileExtension(fname) + "/" + copyed_name;
 		try{
 			fs::copy_file(fname, fname_c, fs::copy_options::overwrite_existing);
