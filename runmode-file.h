@@ -4,7 +4,7 @@
 #include <filesystem>
 
 namespace fs = std::filesystem;
-void partsthefile(std::vector<std::string>will_partfiles, std::string inputpath);
+void partsthefile(std::vector<std::string>will_partfiles);
 
 void filemode(std::string inputpath, std::string filetype) {
 	std::cout << "正在加载......" << std::endl;
@@ -30,14 +30,14 @@ void filemode(std::string inputpath, std::string filetype) {
 	std::cout << "加载完成" << std::endl;
 	std::cout << "====================================================================================================" << std::endl;
 	std::cout << "正在进行->文件复制" << std::endl;
-	partsthefile(files, inputpath);
+	partsthefile(files);
 	std::cout << "完成" << std::endl;
 }
 
-void partsthefile(std::vector<std::string>will_partfiles, std::string inputpath) {
+void partsthefile(std::vector<std::string>will_partfiles) {
 	std::string workpath = "./";
 	std::string fname, fname_c;
-	std::string cre_dir, copyed_name;
+	std::string cre_dir;
 	for (auto a : will_partfiles) {
 		fname = a;
 		file_write_c("./report/file_list.txt", fname + "\n");
@@ -47,8 +47,7 @@ void partsthefile(std::vector<std::string>will_partfiles, std::string inputpath)
 		}
 		cre_dir = "temp/" + getFileExtension(fname);
 		fs::create_directory(cre_dir);
-		copyed_name = removePrefix(transPathToDot(fname), inputpath);
-		fname_c = workpath + "temp/" + getFileExtension(fname) + "/" + copyed_name;
+		fname_c = workpath + "temp/" + getFileExtension(fname) + "/" + transPathToDot(fname);
 		try{
 			fs::copy_file(fname, fname_c, fs::copy_options::overwrite_existing);
 		}
