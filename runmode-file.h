@@ -4,9 +4,9 @@
 #include <filesystem>
 
 namespace fs = std::filesystem;
-void partsthefile(std::vector<std::string>will_partfiles, std::string workpath);
+void partsthefile(std::vector<std::string>will_partfiles);
 
-void filemode(std::string workpath, std::string inputpath, std::string filetype) {
+void filemode(std::string inputpath, std::string filetype) {
 	std::cout << "正在加载......" << std::endl;
 	std::vector<std::string>fileinwp = getAllFiles(inputpath);
 	std::cout << "\t已加载文件列表" << std::endl;
@@ -30,11 +30,12 @@ void filemode(std::string workpath, std::string inputpath, std::string filetype)
 	std::cout << "加载完成" << std::endl;
 	std::cout << "====================================================================================================" << std::endl;
 	std::cout << "正在进行->文件复制" << std::endl;
-	partsthefile(files, workpath);
+	partsthefile(files);
 	std::cout << "完成" << std::endl;
 }
 
-void partsthefile(std::vector<std::string>will_partfiles, std::string workpath) {
+void partsthefile(std::vector<std::string>will_partfiles) {
+	std::string workpath = "./";
 	std::string fname, fname_c;
 	std::string cre_dir;
 	for (auto a : will_partfiles) {

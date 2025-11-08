@@ -1,5 +1,4 @@
 ﻿# 参数  
-- `--workpath-<anypath>`指定一个目录作为工作目录，默认为./  
 - `--mode-(selfcheck|file)`指定运行模式，默认为selfcheck  
 - `--filetype-<filetype>`指定文件的类型的扩展名，默认为.  
 - `--inputpath-<anypath>`指定一个目录作为输入目录，默认为./  

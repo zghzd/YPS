@@ -51,7 +51,7 @@ std::vector<fs::path> getSmaliDirs(const std::string& srcRoot) {
     return dirs;
 }
 
-void SmaliFilesProcessing(const std::string& srcRoot, const std::string& dstRoot, std::string my_date) {
+void SmaliFilesProcessing(const std::string& srcRoot, const std::string& dstRoot) {
     std::vector<fs::path> smaliDirs = getSmaliDirs(srcRoot);
     for (const auto& srcDir : smaliDirs) {
         for (auto& p : fs::recursive_directory_iterator(srcDir)) {

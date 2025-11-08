@@ -5,19 +5,13 @@
 #include "copyright.h"
 #include "data_processing.h"
 #include "processingcenter.h"
-/*
---workpath-<anypath>
---mode-(selfcheck|file)
---filetype-<filetype>
---inputpath-<anypath>
---pack-<packagename>
-*/
+
 namespace fs = std::filesystem;
 
 std::string my_date = time_now(1);
 std::string run_time = time_now_x1();
-//default config:
 std::string workpath = "./";
+
 std::string workmode = "selfcheck";
 std::string filetype = ".";
 std::string inputpath = "./";
@@ -38,10 +32,6 @@ int main(int argc, char* argv[]) {
             if (strparts.empty()) {
                 std::cerr << "错误的参数传递->" + v << std::endl;
                 return 1;
-            }
-            if (strparts[0] == "workpath") {
-                workpath = strparts[1];
-                std::cout << strparts[0] + "=" + strparts[1] << std::endl;
             }
             if (strparts[0] == "mode") {
                 workmode = strparts[1];

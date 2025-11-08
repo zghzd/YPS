@@ -4,17 +4,6 @@
 #include "load_pack.h"
 #include "runmode-file.h"
 
-/*
-report/    temp/    outdir/
-*/
-/*
---workpath-<anypath>    ./
---mode-(selfcheck|file)    selfcheck
---filetype-<filetype>    .
---inputpath-<anypath>    ./
---pack-<packagename>    ""
-*/
-
 namespace fs = std::filesystem;
 
 void processingcenter(std::vector<std::string>args) {
@@ -25,7 +14,7 @@ void processingcenter(std::vector<std::string>args) {
 
 	}
 	else if (args[1] == "file") {
-		filemode(args[0], args[3], args[2]);
+		filemode(args[3], args[2]);
 	}
 	else {
 		std::cerr << "无效的运行模式" << std::endl;
