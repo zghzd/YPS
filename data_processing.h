@@ -88,3 +88,10 @@ std::string transPathToDot(const std::string path) {
     }
     return result;
 }
+
+std::string removePrefix(const std::string& str, const std::string& prefix) {
+    if (str.find(prefix) == 0) {
+        return str.substr(prefix.length());
+    }
+    return str;
+}
