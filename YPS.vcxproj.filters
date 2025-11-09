@@ -62,6 +62,9 @@
     <ClInclude Include="runmode-file.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ab-the-file.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
@@ -75,6 +78,15 @@
     </None>
     <None Include="Build files manually recorded by the user.md">
       <Filter>资源文件</Filter>
+    </None>
+    <None Include="python_ab_so.py">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="python_ab_xml-android.py">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="buildrun.bat">
+      <Filter>源文件</Filter>
     </None>
   </ItemGroup>
 </Project>

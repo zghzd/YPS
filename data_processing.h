@@ -97,3 +97,28 @@ std::string removePrefix(const std::string& str, const std::string& prefix) {
     }
     return str;
 }
+
+bool is_dir_has_file(const std::string& path) {
+    try {
+        if (!fs::exists(path)) {
+            std::cout << "路径不存在: " << path << std::endl;
+            return false;
+        }
+        if (!fs::is_directory(path)) {
+            std::cout << "路径不是目录: " << path << std::endl;
+            return false;
+        }
+        if (fs::is_empty(path)) {
+            return false;
+        }
+        return true;
+    }
+    catch (const fs::filesystem_error& ex) {
+        std::cout << "文件系统错误: " << ex.what() << std::endl;
+        return false;
+    }
+    catch (const std::exception& ex) {
+        std::cout << "错误: " << ex.what() << std::endl;
+        return false;
+    }
+}

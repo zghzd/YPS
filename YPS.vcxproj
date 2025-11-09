@@ -121,6 +121,10 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -139,11 +143,15 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>call "d:/yps/buildrun.bat"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ab-the-file.h" />
     <ClInclude Include="base_io.h" />
     <ClInclude Include="data_processing.h" />
     <ClInclude Include="entropy.h" />
@@ -168,10 +176,13 @@
       <SubType>
       </SubType>
     </None>
+    <None Include="buildrun.bat" />
     <None Include="known_issues.md">
       <SubType>
       </SubType>
     </None>
+    <None Include="python_ab_so.py" />
+    <None Include="python_ab_xml-android.py" />
     <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

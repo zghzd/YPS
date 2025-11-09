@@ -2,6 +2,7 @@
 #include <iostream>
 #include <regex>
 #include <filesystem>
+#include "ab-the-file.h"
 
 namespace fs = std::filesystem;
 void partsthefile(std::vector<std::string>will_partfiles, std::string inputpath);
@@ -32,6 +33,7 @@ void filemode(std::string inputpath, std::string filetype) {
 	std::cout << "正在进行->文件复制" << std::endl;
 	partsthefile(files, inputpath);
 	std::cout << "完成" << std::endl;
+	ab_mainact();
 }
 
 void partsthefile(std::vector<std::string>will_partfiles, std::string inputpath) {
