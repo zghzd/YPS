@@ -76,9 +76,6 @@
     <None Include="ArgumentValue.md">
       <Filter>资源文件</Filter>
     </None>
-    <None Include="Build files manually recorded by the user.md">
-      <Filter>资源文件</Filter>
-    </None>
     <None Include="python_ab_so.py">
       <Filter>源文件</Filter>
     </None>

@@ -5,7 +5,7 @@ a = Analysis(
     ['python_ab_xml-android.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('D:\\YPS\\x64\\public.xml', 'androguard/core/resources')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

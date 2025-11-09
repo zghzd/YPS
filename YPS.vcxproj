@@ -172,10 +172,6 @@
       <SubType>
       </SubType>
     </None>
-    <None Include="Build files manually recorded by the user.md">
-      <SubType>
-      </SubType>
-    </None>
     <None Include="buildrun.bat" />
     <None Include="known_issues.md">
       <SubType>
